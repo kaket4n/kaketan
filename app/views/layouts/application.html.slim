@@ -1,0 +1,17 @@
+html
+  head
+    title="KAKETAN.COM"
+    = stylesheet_link_tag "application", :media => "all"
+    = csrf_meta_tags
+  body
+    header.mgbt-20
+      div.text-center
+        h1 = "KAKETAN.COM"
+    = yield
+    footer.footer.crearfix
+      .container-fluid
+        p.text-right.mgtp-10
+          span.text-muted
+            = link_to "利用規約"
+          span.text-muted.mglt-10
+            | 2017 KAKETAN.COM
