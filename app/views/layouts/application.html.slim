@@ -7,6 +7,18 @@ html
     header.mgbt-20
       div.text-center
         h1 = "KAKETAN.COM"
+      div
+        p.notice
+          = notice
+        p.alert
+          = alert
+      nav
+        - if user_signed_in?
+          = link_to 'プロフィール変更', edit_user_registration_path
+          = link_to 'ログアウト', destroy_user_session_path, method: :delete
+        - else
+          = link_to 'サインアップ', new_user_registration_path
+          = link_to 'ログイン', new_user_session_path
     = yield
     footer.footer.crearfix
       .container-fluid
