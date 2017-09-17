@@ -2,6 +2,7 @@ class Admin::NotesController < AdminController
   before_action :set_note, only: [:show, :edit, :update]
 
   def index
+    @notes = Note.all
   end
 
   def show
