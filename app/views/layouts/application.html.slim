@@ -2,23 +2,25 @@ html
   head
     title="KAKETAN.COM"
     = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
     = csrf_meta_tags
   body
     header.mgbt-20
       div.text-center
         h1 = "KAKETAN.COM"
-      div
+      div.container
         p.notice
           = notice
         p.alert
           = alert
-      nav
-        - if user_signed_in?
-          = link_to 'プロフィール変更', edit_user_registration_path
-          = link_to 'ログアウト', destroy_user_session_path, method: :delete
-        - else
-          = link_to 'サインアップ', new_user_registration_path
-          = link_to 'ログイン', new_user_session_path
+      nav.container
+        div.text-right
+          - if user_signed_in?
+            = link_to 'プロフィール変更', edit_user_registration_path
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete
+          - else
+            = link_to 'サインアップ', new_user_registration_path
+            = link_to 'ログイン', new_user_session_path
     = yield
     footer.footer.crearfix
       .container-fluid
