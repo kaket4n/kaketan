@@ -7,25 +7,32 @@ html
   body
     header.mgbt-20
       div.text-center
-        h1 = "KAKETAN.COM"
+        h1.h2 = link_to "KAKETAN.COM", root_path
+      hr.split-full
       div.container
-        p.notice
-          = notice
-        p.alert
-          = alert
+        - if notice
+          p.notice
+            = notice
+        - if alert
+          p.alert
+            = alert
       nav.container
         div.text-right
-          - if user_signed_in?
-            = link_to 'プロフィール変更', edit_user_registration_path, class: "mglt-10"
-            = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "mglt-10"
-          - else
-            = link_to 'サインアップ', new_user_registration_path, class: "mglt-10"
-            = link_to 'ログイン', new_user_session_path, class: "mglt-10"
     = content_for?(:devise) ? yield(:devise) : yield
     footer.footer.crearfix
       .container-fluid
         p.text-right.mgtp-10
           span.text-muted
             = link_to "利用規約"
+          - if user_signed_in?
+            span.text-muted
+              = link_to 'プロフィール変更', edit_user_registration_path, class: "mglt-10"
+            span.text-muted
+              = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "mglt-10"
+          - else
+            span.text-muted
+              = link_to 'サインアップ', new_user_registration_path, class: "mglt-10"
+            span.text-muted
+              = link_to 'ログイン', new_user_session_path, class: "mglt-10"
           span.text-muted.mglt-10
             | 2017 KAKETAN.COM

@@ -1,4 +1,4 @@
-div.container-fluid.pdbt-20.bg-info
+div.container-fluid.pdbt-20
   h3.text-center.mgbt-20
     | Introduce
   div.container
@@ -7,7 +7,7 @@ div.container-fluid.pdbt-20.bg-info
         = image_tag 'qkake', class: 'img-responsive'
       div.col-md-9
         p
-          | かけちゃん（1992年10月30日-）は日本のエンジニア、ブロガー、YouTuberである。福岡県出身。
+          | KAKETAN（1992年10月30日-）は日本のエンジニア、ブロガー、YouTuberである。福岡県出身。
         p
           | 大学では商学、経営学を学ぶ。「就活」をするも、内定後に「売る」ことではなく「創る」ことを仕事にしたいという気持ちが大きくなり、新卒カードを棄てて内定ゼロの状態で上京。家も知り合いも無い状態でシェアハウスを転々として生き延びる。
         p
@@ -16,6 +16,7 @@ div.container-fluid.pdbt-20.bg-info
           | SEO を意識した LP 作成に始まり、大規模なサイトリニューアルを手がける。Ruby on Rails を用いた開発に移行するタイミングでバックエンドにも着手する。
         p
           | 2016年4月、渋谷の IT 企業に入社。現在は Web エンジニアとして Rails を用いたサービスの開発を行う。
+hr.split
 div.container-fluid.mgbt-20
   h3.text-center
     | Worth
@@ -25,18 +26,30 @@ div.container-fluid.mgbt-20
         p.h4.mgbt-20
           | KAKETAN.COM のチャンネル登録をすることで以下のメリットが受けられます。
       div.col-md-4.text-center
-        = image_tag 'if_note_1_1296369'
+        = image_tag 'note'
         p.mgtp-20
           | 会員限定の記事を公開します。
       div.col-md-4.text-center
-        = image_tag 'if_mail_287730'
+        = image_tag 'mail'
         p.mgtp-20
           | 会員限定のメルマガを配信します。
       div.col-md-4.text-center
-        = image_tag 'if_video_1054941'
+        = image_tag 'video'
         p.mgtp-20
           | その他オリジナルコンテンツを限定公開します。
-div.container-fluid.pdbt-20.bg-success
+hr.split
+div.container-fluid.mgbt-20
+  h3.text-center.mgbt-20
+    | Subscribe
+  div.container
+    div.row
+      div.text-center
+        = link_to new_user_registration_path do
+          span.button = "無料でチャンネル登録する"
+        p.text-muted.h5
+          | ※利用規約に同意したものとみなします。
+hr.split
+div.container-fluid.pdbt-20
   h3.text-center
     | Contents
   div.container
@@ -67,31 +80,15 @@ div.container-fluid.pdbt-20.bg-success
         li
           | YouTube動画の紹介と裏話の公開
 
+hr.split
+hr.split
 div.container-fluid.mgbt-20
   h3.text-center.mgbt-20
     | Subscribe
   div.container
     div.row
-      div.col-md-6
-        p
-          | 性別
-      div.col-md-6
-        p
-          | 男性
-      div.col-md-6
-        p
-          | 地域
-      div.col-md-6
-        p
-          | 東京都
-      div.col-md-6
-        p
-          | メールアドレス
-      div.col-md-6
-        p
-          | hoge@gmail.com
-      div.col-md-12.mgtp-20.pdbt-20
-        button.btn.btn-lg.btn-primary.center-block
-          | 無料でチャンネル登録する
-        p.text-center
+      div.text-center
+        = link_to new_user_registration_path do
+          span.button = "無料でチャンネル登録する"
+        p.text-muted.h5
           | ※利用規約に同意したものとみなします。
