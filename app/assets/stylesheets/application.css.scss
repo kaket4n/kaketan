@@ -17,6 +17,7 @@
 
 body {
   font-size: 17px;
+  color: #3d3f44;
 }
 
 a:link { color: #000; }
@@ -35,7 +36,16 @@ a {
   margin-right: auto;
 }
 .split-full {
-  border-top: 1px solid #fff;
+  border-top: 1px solid #fbfbfb;
+}
+.menu {
+  color: #f0f0f0;
+  font-size: 18px;
+}
+.menu > span {
+  margin: 0 10;
+  padding: 0 5 5 5;
+  border-bottom: 1px solid #000;
 }
 .button {
   border: 1px solid #000;
@@ -53,6 +63,9 @@ a {
 .mgbt-20 {
   margin-bottom: 20px;
 }
+.mgbt-60 {
+  margin-bottom: 60px;
+}
 .pdtp-20 {
   padding-top: 20px;
 }
@@ -61,4 +74,24 @@ a {
 }
 .mglt-10 {
   margin-left: 10px;
+}
+.note {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  .title {
+    font-size: 2.2rem;
+  }
+  .content {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .created_at {
+    color: #909090;
+  }
+}
+.admin-edit > a {
+  margin: 10;
+  font-size: 14px;
+  color: #8e8787;
 }

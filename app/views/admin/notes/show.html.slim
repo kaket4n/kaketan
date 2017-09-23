@@ -1,5 +1,1 @@
-.container
-  div
-    = link_to "編集する", edit_admin_note_path(@note)
-    h3 = @note.title
-    h4 = @note.content
+= render "shared/notes/show"

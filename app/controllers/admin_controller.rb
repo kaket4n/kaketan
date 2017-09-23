@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   before_action :redirect_to_root, unless: -> { admin? }
+  include ApplicationHelper
 
   def index
   end
