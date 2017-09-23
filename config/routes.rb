@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :notes
   end
+  get "/terms", to: "pages#terms"
+  get "/privacy", to: "pages#privacy"
   root "home#index"
 end
