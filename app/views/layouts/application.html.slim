@@ -1,15 +1,18 @@
 html
   head
-    title="KAKETAN.COM"
+    title = @title.presence || "KAKETAN.COM"
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
   body
-    header.mgbt-20
-      div.text-center
+    header
+      div.text-center.mgbt-60
         h1.h2 = link_to "KAKETAN.COM", root_path
-      hr.split-full
-      div.container
+      div.container.menu
+        span = link_to "Home", root_path
+        span = link_to "Note", notes_path
+      div.container.mgtp-20
         - if notice
           p.notice
             = notice
