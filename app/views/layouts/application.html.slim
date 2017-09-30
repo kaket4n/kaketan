@@ -26,7 +26,7 @@ html
       .container-fluid
         p.text-right.mgtp-10
           span.text-muted
-            = link_to "利用規約"
+            = link_to "利用規約", terms_path
           - if user_signed_in?
             span.text-muted
               = link_to 'プロフィール変更', edit_user_registration_path, class: "mglt-10"
