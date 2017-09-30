@@ -40,6 +40,6 @@ class Admin::NotesController < AdminController
   end
 
   def note_params
-    params.require(:note).permit(:category_id, :title, :content)
+    params.require(:note).permit(:category_id, :restriction, :title, :content)
   end
 end
