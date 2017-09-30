@@ -1,4 +1,8 @@
 class Admin::PicksController < AdminController
+  def index
+    @picks = Pick.all
+  end
+
   def show
     @pick = Pick.find(params[:id])
   end
@@ -20,6 +24,6 @@ class Admin::PicksController < AdminController
   private
 
   def pick_params
-    params.require(:pick).permit(:url, :memo, :title, :content, :img_url)
+    params.require(:pick).permit(:url, :memo, :title, :description, :img_url)
   end
 end

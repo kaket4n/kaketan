@@ -24,6 +24,8 @@ gem 'slim-rails'
 gem 'bootstrap-sass'
 # Use devise
 gem 'devise'
+# Use Mechanize
+gem 'mechanize'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

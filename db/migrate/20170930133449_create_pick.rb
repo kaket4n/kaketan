@@ -4,8 +4,10 @@ class CreatePick < ActiveRecord::Migration[5.1]
       t.string :url, null: false
       t.text   :memo
       t.string :title
-      t.string :content
+      t.text   :description
       t.string :img_url
+
+      t.timestamps null: false
     end
   end
 end

@@ -32,8 +32,10 @@ ActiveRecord::Schema.define(version: 20170930133449) do
     t.string "url", null: false
     t.text "memo"
     t.string "title"
-    t.string "content"
+    t.text "description"
     t.string "img_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
