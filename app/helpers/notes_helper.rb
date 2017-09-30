@@ -11,7 +11,7 @@ module NotesHelper
     if user_signed_in?
       note
     else
-      note.gsub(/<secret>(\r|\n)*.*(\r|\n)*<\/secret>/, invitation_text)
+      note.gsub(/<secret>(\R|.)*<\/secret>/, invitation_text)
     end
   end
 
