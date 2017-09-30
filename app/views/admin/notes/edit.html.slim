@@ -1,13 +1,1 @@
-.container
-  = form_for [:admin, @note] do |f|
-    div.field.form-group
-      = f.label :category_id
-      = f.collection_select :category_id, Category.all, :id, :name, class: 'form-control'
-    div.field.form-group
-      = f.label :title
-      = f.text_field :title, class: 'form-control'
-    div.field.form-group
-      = f.label :content
-      = f.text_area :content, class: 'form-control', size: "20x10"
-    div.field.form-group
-      = f.submit "投稿する", class: 'btn btn-primary'
+= render "form"

@@ -4,10 +4,19 @@
       = @note.title
       - if admin?
         span.admin-edit = link_to "[Edit]", edit_admin_note_path(@note)
-    div.content
-      = simple_format(@note.content)
-    p.created_at.text-right
-      = @note.created_at.strftime("%Y-%m-%d %H:%M:%S")
-    div.share-button.text-right
-      = twitter_share_button(url: note_url(@note), text: @note.title)
-      = hatena_share_button(url: note_url(@note))
+      div.content
+        - if @note.public? || user_signed_in?
+          = simple_format(@note.content)
+          p.created_at.text-right
+            = @note.created_at.strftime("%Y-%m-%d %H:%M:%S")
+          div.share-button.text-right
+            = twitter_share_button(url: note_url(@note), text: @note.title)
+            = hatena_share_button(url: note_url(@note))
+        - else
+          p.text-center.h5
+            | この記事はチャンネル登録者のみ閲覧可能です
+          div.text-center
+            = link_to new_user_registration_path do
+              span.button = "無料でチャンネル登録する"
+          p.created_at.text-right
+            = @note.created_at.strftime("%Y-%m-%d %H:%M:%S")
