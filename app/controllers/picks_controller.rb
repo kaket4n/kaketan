@@ -1,6 +1,6 @@
 class PicksController < ApplicationController
   before_action :set_pick, only: :show
-  before_action :set_title, only: :show
+  before_action :set_title
 
   def index
     @picks = Pick.all
@@ -16,8 +16,11 @@ class PicksController < ApplicationController
   end
 
   def set_title
-    if @pick&.url.present?
-      @title = "#{@pick.url}｜KAKETAN.COM"
+    case action_name
+    when "index"
+      @title = "Picks"
+    when "show"
+      @title = @pick&.title
     end
   end
 end

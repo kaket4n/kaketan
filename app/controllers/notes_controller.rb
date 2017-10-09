@@ -18,9 +18,9 @@ class NotesController < ApplicationController
   def set_title
     case action_name
     when "index"
-      @title = "Notes｜KAKETAN.COM"
+      @title = "Notes"
     when "show"
-      @title = "#{@note&.title}｜KAKETAN.COM"
+      @title = @note&.title
     end
   end
 end
