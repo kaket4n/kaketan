@@ -1,6 +1,5 @@
 class Pick < ApplicationRecord
   before_validation :assign_attr_with_scraping
-  validate :description_must_be_present
   validate :img_url_must_be_present
 
   private
@@ -12,12 +11,6 @@ class Pick < ApplicationRecord
     self.description = page.at('meta[@property="og:description"]')["content"]
     self.img_url = page.at('meta[@property="og:image"]')["content"]
   rescue => e
-  end
-
-  def description_must_be_present
-    if description.blank?
-      errors.add(:description, "description の取得に失敗しました。")
-    end
   end
 
   def img_url_must_be_present
