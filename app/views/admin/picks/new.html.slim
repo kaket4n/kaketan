@@ -1,4 +1,8 @@
 .container
+  - if @pick.errors.any?
+    ul
+      - @pick.errors.full_messages.each do |msg|
+        li = msg
   = form_for [:admin, @pick] do |f|
     div.field.form-group
       = f.label :url
