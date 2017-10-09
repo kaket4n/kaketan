@@ -1,9 +1,1 @@
-.container
-  h2.h3 = link_to @pick.title, @pick.url, target: "_blank"
-  .row
-    = link_to @pick.url, target: "_blank" do
-      .col-md-4
-        = image_tag(@pick.img_url, class: 'img-responsive')
-      .col-md-8
-        h3.h5 = truncate(@pick.description, length: 200)
-  h4 = @pick.memo
+= render "shared/picks/show"
