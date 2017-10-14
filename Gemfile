@@ -26,6 +26,10 @@ gem 'bootstrap-sass'
 gem 'devise'
 # Use Mechanize
 gem 'mechanize'
+# Use Twitter
+gem 'twitter'
+# Use config
+gem 'config'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
