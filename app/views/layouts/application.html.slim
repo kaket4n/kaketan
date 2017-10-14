@@ -1,6 +1,6 @@
 html
   head
-    title = @title.presence || "KAKETAN.COM"
+    title = @title.present? ? "#{@title}｜KAKETAN.COM" : "KAKETAN.COM"
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -12,6 +12,7 @@ html
       div.container.menu
         span = link_to "Home", root_path
         span = link_to "Note", notes_path
+        span = link_to "Pick", picks_path
       div.container.mgtp-20
         - if notice
           p.notice

@@ -60,6 +60,9 @@ a {
 .mgtp-20 {
   margin-top: 20px;
 }
+.mgtp-60 {
+  margin-top: 60px;
+}
 .mgbt-20 {
   margin-bottom: 20px;
 }
@@ -85,6 +88,46 @@ a {
     font-size: 1.7rem;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
+  }
+  .created_at {
+    color: #909090;
+  }
+}
+.pick {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  .title {
+    font-size: 2.2rem;
+  }
+  .content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #c7c7c7;
+    border-radius: 0.7rem;
+    padding: 1.2rem;
+    .og-image {
+      max-height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .description {
+      color: #848484;
+    }
+  }
+  .memo {
+    .text {
+      margin-left: 60px;
+      border: 1px solid #646464;
+      border-radius: 1.2rem;
+      padding: 1.2rem;
+    }
+    img {
+      width: 50px;
+    }
+  }
+  img {
+    max-height: 200px;
   }
   .created_at {
     color: #909090;

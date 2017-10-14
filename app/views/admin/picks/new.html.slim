@@ -1,0 +1,14 @@
+.container
+  - if @pick.errors.any?
+    ul
+      - @pick.errors.full_messages.each do |msg|
+        li = msg
+  = form_for [:admin, @pick] do |f|
+    div.field.form-group
+      = f.label :url
+      = f.text_field :url, class: 'form-control'
+    div.field.form-group
+      = f.label :memo
+      = f.text_area :memo, class: 'form-control', size: "20x10"
+    div.field.form-group
+      = f.submit "投稿する", class: 'btn btn-primary'
