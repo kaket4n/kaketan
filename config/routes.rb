@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end
   get "/terms", to: "pages#terms"
   get "/privacy", to: "pages#privacy"
+  get "/spirit", to: "pages#spirit"
   root "home#index"
 end
