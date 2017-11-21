@@ -10,10 +10,17 @@ html
       div.text-center.mgbt-60
         h1.h2 = link_to "KAKETAN.COM", root_path
       div.container.menu
-        span = link_to "Home", root_path
-        span = link_to "Note", notes_path
-        span = link_to "Pick", picks_path
-        span = link_to "Twitter", "https://twitter.com/kaketancom", target: "_blank"
+        .row
+          .col-xs-4.col-md-1
+            span = link_to "Home", root_path
+          .col-xs-4.col-md-1
+            span = link_to "Note", notes_path
+          .col-xs-4.col-md-1
+            span = link_to "Pick", picks_path
+          .col-xs-4.col-md-1
+            span = link_to "Spirit", spirit_path
+          .col-xs-4.col-md-1
+            span = link_to "Twitter", "https://twitter.com/kaketancom", target: "_blank"
       div.container.mgtp-20
         - if notice
           p.notice
