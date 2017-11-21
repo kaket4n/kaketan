@@ -42,10 +42,13 @@ a {
   color: #f0f0f0;
   font-size: 18px;
 }
-.menu > span {
+.menu span {
   margin: 0 10;
   padding: 0 5 5 5;
   border-bottom: 1px solid #000;
+}
+.menu .col-xs-4 {
+  margin-bottom: 15px;
 }
 .button {
   border: 1px solid #000;
