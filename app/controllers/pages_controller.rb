@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def privacy
     @title = "プライバシーポリシー"
   end
+
+  def spirit
+    @title = "超充スピリット宣言"
+  end
 end
