@@ -10,4 +10,8 @@ class PagesController < ApplicationController
   def spirit
     @title = "超充スピリット宣言"
   end
+
+  def career
+    @title = "キャリア"
+  end
 end
