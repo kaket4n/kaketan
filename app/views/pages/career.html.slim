@@ -1,65 +1,56 @@
 .container.career
   .page-header
-    h1.h2 Career
+    h1.h2 職務経歴書
   .overview
+    .h3 個人データ
+    ul
+      li 氏名: 梯 良介（Kakehashi Ryosuke）
+      li GitHub: https://github.com/qkake
+      li ブログ: http://kaketan.hatenablog.com
     .h3 略歴
     ul
-      li 2017年 12月 GMOペパボ株式会社退職
-      li 2016年 04月 GMOペパボ株式会社入社
-      li 2016年 01月 株式会社ウリドキネット退職
-      li 2015年 04月 株式会社ウリドキネット入社
-      li 2015年 03月 福岡大学卒業
+      li GMOペパボ株式会社（2016年4月〜2017年12月）
+      li 株式会社ウリドキネット（2015年4月〜2016年1月）
+    .h3 プログラミングスキル（実務経験）
+    ul
+      li Ruby, Ruby on Rails: 2年以上
+      ul
+        li Rails は 4系/5系 ともに実務経験あり。
+        li RSpec を用いたテスト駆動開発の経験あり。
+        li API 設計・実装、クエリ実行計画をもとにしたパフォーマンスチューニング経験あり。
+        li 業務委託で Rails アプリケーション開発のためのインストラクター経験（4名以上）あり。
+      li HTML/CSS: 2年以上
+      ul
+        li Bootstrap を用いたレスポンシブデザイン実装経験あり。
+      li JavaScript: 1年以上
+      ul
+        li フロントエンドエンジニアとして jQuery 利用経験あり。
+        li Rails アプリ内での Ajax 利用経験あり。
+
+  .h3 職務経歴
   .details
-    .h3 2016年 10月 - 2017年 12月 GMOペパボ minne 事業部 Web エンジニア
+    .h3 2016年 4月 - 2017年 12月 GMOペパボ minne 事業部
     .detail
       .caption
-        |  minne ハンドメード事業（EC）に係る Web アプリケーションの開発
+        |  minne ハンドメード事業（EC）に係る Web アプリケーションの開発（但し2016年9月まではディレクター業務）
       .h4
         | 主な開発
       .works
         ul
-          li 販売者ごとの送料無料設定機能設計・開発
+          li 販売者ごとの送料無料設定機能（API含む）設計・開発
+          li 注文完了メールの HTML 化（Action Mailer）
+          li 決済金額照合効率化（Active Job）
           ul
-            li 新規テーブル追加
-            li 登録・編集フォーム（CRUD）作成
-          li 販売者ごとの送料無料設定 API 設計・開発
-          li 注文完了メールの HTML 化
-          ul
-            li Action Mailer
-            li premailer-rails
-          li 決済金額照合効率化
-          ul
-            li Active Job
             li Sidekiq, Slack通知
             li モック, スタブを用いたテストなど
-          li 販売者向け小技情報の表示
-          ul
-            li Active Hash
-            li YAML ファイル作成
-            li Class （Model）の作成
+          li 販売者向け小技情報の表示（Active Hash）
           li メールマガジンテンプレート作成ページ開発
-          li 検索 Web View 追加機能開発
-          li カート上限到達時エラー文言表示対応
-          li ログイン時にバナー非表示可能機能開発
-          ul
-            li flag_shih_tzu（bit column）
-            li Cells
           li 会話にピン機能開発
           ul
             li Ajax
-            li 新規カラム追加
             li 実行計画を見て複合 index の追加
           li 特集掲載ラベル API 設計・開発
-          li レビュー画像閲覧・投稿 API 設計・開発 など
-
-      .h4
-        | その他業務改善開発・ルーティン業務
-      ul
-        li 一括作品登録機能
-        li ドラッグアンドドロップで作品並び替え
-        li 月間ランキング更新（integration 環境での動作確認など）
-        li 顧客管理システムの改善
-        li 注文キャンセル時に自動で返金情報を含むメールを送信 など
+          li レビュー画像閲覧・投稿 API 設計・開発 など他多数
 
       .h4
         | 開発環境
@@ -78,24 +69,10 @@
       .h4
         | 開発の進め方
       p 　アジャイル・スクラムの手法でチーム開発を行っていました。2週間を1つのスプリントとして、スプリントの最初にチームでタスクの見積もりをします。そしてスプリントの最後には KPT のフレームワークを用いてふりかえりを行っていました。
-      p 　1つの機能開発について基本的に以下の流れを担当して回します。
+      p 　1つの機能開発について基本的に以下の流れを担当して回していました。
       p 　　設計 -> 開発・テスト -> コードレビュー -> 取り込み（修正）-> integration 動作確認 -> CI -> リリース作業 -> staging 動作確認 -> 本番動作確認 -> （効果検証クエリ作成）
-      p 　また各々のタスクはカンバン（Trello）で管理して、見積もりと実績に大きなズレがないかを検証していました。
  
-    .h3 2016年 04月 - 2016年 09月 GMOペパボ minne 事業部 ディレクター
-    .detail
-      .caption
-        |  minne 事業に係るディレクター業務
-      .h4
-        | 主な業務
-      .works
-        ul
-          li メールマガジン配信設定業務
-          li iOS/Android アプリのテスター業務
-          li Product Owner サポート業務
-          li ミーティング議事録作成業務 など
-
-    .h3 2015年 04月 - 2016年 03月 ウリドキネット エンジニア
+    .h3 2015年 4月 - 2016年 3月 ウリドキネット エンジニア
     .detail
       .caption
         | 買取価格比較サービス拡大のためフロントエンド・エンジニアとして入社
