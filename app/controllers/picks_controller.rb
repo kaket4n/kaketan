@@ -3,7 +3,7 @@ class PicksController < ApplicationController
   before_action :set_title
 
   def index
-    @picks = Pick.all
+    @picks = Pick.order(id: :desc).page(params[:page]).per(10)
   end
 
   def show

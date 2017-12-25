@@ -2,7 +2,7 @@ class Admin::NotesController < AdminController
   before_action :set_note, only: [:show, :edit, :update]
 
   def index
-    @notes = Note.all
+    @notes = Note.order(id: :desc).page(params[:page]).per(10)
   end
 
   def show

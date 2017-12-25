@@ -3,7 +3,7 @@ class NotesController < ApplicationController
   before_action :set_title
 
   def index
-    @notes = Note.all
+    @notes = Note.order(id: :desc).page(params[:page]).per(10)
   end
 
   def show

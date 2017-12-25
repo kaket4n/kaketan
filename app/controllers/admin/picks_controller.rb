@@ -1,6 +1,6 @@
 class Admin::PicksController < AdminController
   def index
-    @picks = Pick.all
+    @picks = Pick.order(id: :desc).page(params[:page]).per(10)
   end
 
   def show
