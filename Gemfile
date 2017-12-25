@@ -32,6 +32,8 @@ gem 'twitter'
 gem 'config'
 # Use kaminari
 gem 'kaminari'
+# Use redcarpet
+gem 'redcarpet'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
