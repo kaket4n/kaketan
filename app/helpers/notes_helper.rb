@@ -1,4 +1,13 @@
 module NotesHelper
+  def markdown(text)
+    unless @markdown
+      renderer = Redcarpet::Render::HTML.new
+      @markdown = Redcarpet::Markdown.new(renderer)
+    end
+
+    @markdown.render(text)
+  end
+
   def restrictable(note)
     if user_signed_in?
       note
