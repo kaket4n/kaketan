@@ -6,7 +6,7 @@
         span.admin-edit = link_to "[Edit]", edit_admin_note_path(@note)
       div.content
         - if @note.public? || user_signed_in?
-          = simple_format(restrictable(@note.content.html_safe), {}, sanitize: false)
+          = restrictable(markdown(@note.content)).html_safe
           p.created_at.text-right
             = @note.created_at.strftime("%Y-%m-%d %H:%M:%S")
           div.share-button.text-right
