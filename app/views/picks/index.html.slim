@@ -1,13 +1,1 @@
-.container
-  - @picks.each do |pick|
-    div.pick
-      .row
-        .col-md-4
-          = link_to pick_path(pick) do
-            = image_tag(pick.img_url, class: "img-responsive mgbt-20")
-        .col-md-8
-          p.title.mgbt-20
-            = link_to pick.title, pick_path(pick)
-          p.created_at.text-right
-            = pick.created_at.strftime("%Y-%m-%d %H:%M:%S")
-  = paginate @picks
+= render "shared/picks/index"
