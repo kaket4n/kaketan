@@ -3,7 +3,7 @@
     div.note
       p.title.mgbt-20
         = link_to note.title, note_path(note)
-      p.content
+      div.content
         - if note.public? || user_signed_in?
           = restrictable(markdown(note.content)).html_safe
         - else
