@@ -5,7 +5,7 @@
         = link_to note.title, note_path(note)
       p.content
         - if note.public? || user_signed_in?
-          = truncate(note.content, length: 100)
+          = restrictable(markdown(note.content)).html_safe
         - else
           = "この記事はチャンネル登録者のみ閲覧可能です"
       p.created_at.text-right
