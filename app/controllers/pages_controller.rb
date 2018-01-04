@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   end
 
   def career
+    set_meta_tags nofollow: true, noindex: true
     @title = "キャリア"
   end
 end
