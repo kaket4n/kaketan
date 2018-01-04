@@ -1,4 +1,4 @@
-module NotesHelper
+module DiariesHelper
   def markdown(text)
     unless @markdown
       renderer = Redcarpet::Render::HTML.new
@@ -8,11 +8,11 @@ module NotesHelper
     @markdown.render(text)
   end
 
-  def restrictable(note)
+  def restrictable(diary)
     if user_signed_in?
-      note
+      diary
     else
-      note.gsub(/<secret>(\R|.)*<\/secret>/, invitation_text)
+      diary.gsub(/<secret>(\R|.)*<\/secret>/, invitation_text)
     end
   end
 

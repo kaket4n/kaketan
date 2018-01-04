@@ -1,0 +1,22 @@
+.container
+  div.diary
+    h1.title.mgbt-20
+      = @diary.title
+      - if admin?
+        span.admin-edit = link_to "[Edit]", edit_admin_diary_path(@diary)
+    div.content
+      - if @diary.public? || user_signed_in?
+        = restrictable(markdown(@diary.content)).html_safe
+        p.created_at.text-right
+          = @diary.created_at.strftime("%Y-%m-%d %H:%M:%S")
+        div.share-button.text-right
+          = twitter_share_button(url: diary_url(@diary), text: @diary.title)
+          = hatena_share_button(url: diary_url(@diary))
+      - else
+        p.text-center.h5
+          | この記事はチャンネル登録者のみ閲覧可能です
+        div.text-center
+          = link_to new_user_registration_path do
+            span.button = "無料でチャンネル登録する"
+        p.created_at.text-right
+          = @diary.created_at.strftime("%Y-%m-%d %H:%M:%S")

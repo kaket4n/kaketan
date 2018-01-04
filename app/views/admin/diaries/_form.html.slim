@@ -1,5 +1,5 @@
 .container
-  = form_for [:admin, @note] do |f|
+  = form_for [:admin, @diary] do |f|
     div.field.form-group
       = f.label :category_id
       = f.collection_select :category_id, Category.all, :id, :name, class: 'form-control'
@@ -8,7 +8,7 @@
       = f.check_box :restriction
     div.field.form-group
       = f.label :title
-      = f.text_field :title, class: 'form-control'
+      = f.text_field :title, class: 'form-control', placeholder: Date.today.strftime("%Y年%m月%d日")
     div.field.form-group
       = f.label :content
       = f.text_area :content, class: 'form-control', size: "20x10"

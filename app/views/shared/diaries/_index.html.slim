@@ -1,0 +1,13 @@
+.container
+  - @diaries.each do |diary|
+    div.diary
+      p.title.mgbt-20
+        = link_to diary.title, diary_path(diary)
+      div.content
+        - if diary.public? || user_signed_in?
+          = restrictable(markdown(diary.content)).html_safe
+        - else
+          = "この記事はチャンネル登録者のみ閲覧可能です"
+      p.created_at.text-right
+        = diary.created_at.strftime("%Y-%m-%d %H:%M:%S")
+  = paginate @diaries
