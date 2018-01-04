@@ -9,12 +9,12 @@ class ApplicationController < ActionController::Base
                   og: {
                     site_name: "KAKETAN.COM",
                     description: "いま最も注目すべき KAKETAN の発信する情報メディア",
-                    image: "#{view_context.asset_path "qkake"}"
+                    image: "#{view_context.asset_url "qkake"}"
                   },
                   twitter: {
                     card: "summary",
                     description: "いま最も注目すべき KAKETAN の発信する情報メディア",
-                    image: "#{view_context.asset_path "qkake"}"
+                    image: "#{view_context.asset_url "qkake"}"
                   }
   end
 end
