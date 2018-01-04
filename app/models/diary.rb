@@ -1,4 +1,4 @@
-class Note < ApplicationRecord
+class Diary < ApplicationRecord
   belongs_to :category
 
   def public?
