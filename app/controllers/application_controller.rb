@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
 
   def prepare_meta_tags
     set_meta_tags description: "いま最も注目すべき KAKETAN の発信する情報メディア",
-                  image_src: "#{view_context.asset_path "qkake"}"
+                  og: {
+                    site_name: "KAKETAN.COM",
+                    description: "いま最も注目すべき KAKETAN の発信する情報メディア",
+                    image: "#{view_context.asset_path "qkake"}"
+                  }
   end
 end

@@ -26,6 +26,8 @@ class NotesController < ApplicationController
   end
 
   def set_note_meta_tags
-    set_meta_tags description: view_context.markdown(@note.content).html_safe[0..120]
+    description = view_context.strip_tags(view_context.markdown(@note.content)[0..120])
+    set_meta_tags description: description,
+                  og: { description: description }
   end
 end
