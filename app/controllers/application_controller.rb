@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
                     site_name: "KAKETAN.COM",
                     description: "いま最も注目すべき KAKETAN の発信する情報メディア",
                     image: "#{view_context.asset_path "qkake"}"
-                  }
+                  },
+                  twitter: { card: "summary" }
   end
 end
