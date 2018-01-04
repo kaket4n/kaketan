@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   before_action :set_note, only: :show
   before_action :set_title
+  before_action :set_note_meta_tags, only: :show
 
   def index
     @notes = Note.order(id: :desc).page(params[:page]).per(10)
@@ -22,5 +23,11 @@ class NotesController < ApplicationController
     when "show"
       @title = @note&.title
     end
+  end
+
+  def set_note_meta_tags
+    description = view_context.strip_tags(view_context.markdown(@note.content)[0..120])
+    set_meta_tags description: description,
+                  og: { description: description }
   end
 end
