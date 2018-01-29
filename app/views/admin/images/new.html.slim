@@ -1,0 +1,7 @@
+.container
+  = form_for [:admin, @image] do |f|
+    div.field.form-group
+      = f.label :image
+      = f.file_field :image
+    div.field.form-group
+      = f.submit "投稿", class: "btn btn-primary"

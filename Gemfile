@@ -36,6 +36,8 @@ gem 'kaminari'
 gem 'redcarpet'
 # Use meta-tags
 gem 'meta-tags'
+gem 'paperclip'
+gem "aws-sdk"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
