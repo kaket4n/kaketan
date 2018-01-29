@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :diaries
     resources :picks
+    resources :images
   end
   get "/terms", to: "pages#terms"
   get "/privacy", to: "pages#privacy"
