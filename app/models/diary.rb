@@ -1,5 +1,6 @@
 class Diary < ApplicationRecord
   belongs_to :category
+  has_many :comments
   before_create :set_default_title, if: lambda { |diary| diary.title.blank? }
 
   def public?

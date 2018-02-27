@@ -8,6 +8,8 @@ class DiariesController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(diary_id: params[:id])
+    @comment = Comment.new
   end
 
   private
