@@ -6,6 +6,7 @@ class Admin::DiariesController < AdminController
   end
 
   def show
+    @comments = Comment.where(diary_id: params[:diary_id])
   end
 
   def new
