@@ -9,7 +9,6 @@ class DiariesController < ApplicationController
     respond_to do |format|
       format.html
       format.rss
-      format.atom
     end
   end
 
