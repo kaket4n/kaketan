@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   get "/career", to: "pages#career"
   root "home#index"
 
-  get :feed, to: 'diaries#index', default: { format: :rss }
+  get :feed, to: 'diaries#index', defaults: { format: :rss }
 end
