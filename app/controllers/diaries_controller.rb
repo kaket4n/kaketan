@@ -5,6 +5,12 @@ class DiariesController < ApplicationController
 
   def index
     @diaries = Diary.order(id: :desc).page(params[:page]).per(10)
+
+    respond_to do |format|
+      format.html
+      format.rss
+      format.atom
+    end
   end
 
   def show

@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get "/spirit", to: "pages#spirit"
   get "/career", to: "pages#career"
   root "home#index"
+
+  get :feed, to: 'diaries#index', default: { format: :rss }
 end
