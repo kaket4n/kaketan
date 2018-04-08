@@ -1,4 +1,6 @@
 .container
+  = link_to diaries_path(format: :rss) do
+    = image_tag "feed", class: "img-responsive pull-right", style: "width: 30px;"
   - @diaries.each do |diary|
     div.diary
       p.title.mgbt-20
